@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Sniffing 기법을 이용한 VoIP 녹취(STT) 및 회의록 생성 서비스 </h1>
+<h1 align="center">Sniffing 기법을 이용한 VoIP 녹취(STT) 및 회의록 생성 서비스 </h1>
 <p>
 </p>
 
-> Sniffing 기법을 사용하여 VoIP 상 전달되는 패킷을 통해 회의록을 생성해주는 서비스이다.
+> Sniffing 기법을 사용하여 VoIP 상 전달되는 패킷을 통해 회의록을 생성해주는 서비스
 
 ## 팀원
 
