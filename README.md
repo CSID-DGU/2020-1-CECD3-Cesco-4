@@ -31,6 +31,10 @@ EXAMPLES:
     pcap2wav -r example.pcap -p /root/wav
     
     pcap2wav -r example.pcap -p /root/wav --mix
+    
+## Usage: sttModule
+	python sttModule.py <wav file>
+wav file : STT를 수행할 wav file 이름
 
 ## 팀원
 
