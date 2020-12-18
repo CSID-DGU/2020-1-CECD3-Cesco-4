@@ -5,36 +5,27 @@
 > Sniffing 기법을 사용하여 VoIP 상 전달되는 패킷을 통해 회의록을 생성해주는 서비스
 
 ## Dependency
-    apt-get install -y tshark sox
-    or
-    yum install wireshark sox
-tshark, wireshark: 패킷 캡쳐 및 페이로드 분리 툴
-
-sox(Sound eXchange): 음성 인코딩 툴
-
-## Usage: pcap2wav
-    pcap2wav [ -h|--help ]
-    pcap2wav -r|--read <pcap file> [-m|--mix] [-p|--path]
-
---read, -r <pcap file>  : pcap file 입력
-  
---mix, -m               : 두 음성 파일을 통합하여 출력
-
---path, -p              : 출력 경로 설정
-
-EXAMPLES:
-
-    pcap2wav --help
-    
-    pcap2wav -r example.pcap
-    
-    pcap2wav -r example.pcap -p /root/wav
-    
-    pcap2wav -r example.pcap -p /root/wav --mix
-    
-## Usage: sttModule
-	python sttModule.py <wav file>
-wav file : STT를 수행할 wav file 이름
+#### Scikit-learn  
+    pip install scikit-learn
+키워드 분석시 사용한 패키지 
+#### konlpy, kss  
+    pip install konlpy  
+    pip install kss
+문장 단위 분리, 단어 단위 분리시 사용한 패키지 
+#### Networkx 
+    pip install networkx
+가중치 그래프 시각화에 필요한 패키지  
+#### Google cloud STT API
+    pip install google-cloud-speech
+STT 기능 사용시 필요한 Google cloud STT 패키지, 설정 방식은 https://cloud.google.com/speech-to-text/docs/?hl=ko 참고
+#### Python-docx
+    pip install python-docx
+최종 회의록 작성시 Word 파일 접근에 필요한 패키지 
+   
+## Usage: Main
+	MeetingLog.bat 파일 실행  
+파일 실행시 진행중인 VoIP 환경에서 Sniffing 실행  
+패킷에서 추출한 Payload는 payload 폴더에 저장, 최종 회의록 파일은 word 폴더에 저장
 
 ## 팀원
 
